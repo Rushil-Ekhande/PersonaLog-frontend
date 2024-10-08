@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import UserContextProvider from "./contexts/userContextProvider.jsx";
 
 export default function Layout() {
   return (
-    <div className="main">
+    <UserContextProvider>
       <Header />
-        <Outlet/>
+      <Outlet />
       <Footer />
-    </div>
+    </UserContextProvider>
   );
 }

@@ -1,27 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function SignUp() {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleOnSubmit = async (e) => {
+    e.preventDefault();
+    const data = {
+      username,
+      email,
+      password,
+    };
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/user/register-user",
+        data
+      );
+      const Resdata = response.data;
+      if (Resdata.success == true) {
+        alert(Resdata.message);
+      } else {
+        alert(Resdata.message);
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
   return (
     <div className="flex justify-center items-center w-full h-screen bg-[#222222] ">
       <div className="w-[30%] p-4 border-2 border-cyan-300 rounded">
         <h1 className="text-center text-4xl font-bold text-white m-4">
           Sign Up
         </h1>
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={handleOnSubmit}>
           <input
             type="text"
+            name="username"
+            id="username"
+            placeholder="Username...."
+            className="border-none outline-none py-2 px-4 rounded"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            type="email"
             name="email"
             id="email"
             placeholder="Email...."
             className="border-none outline-none py-2 px-4 rounded"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
             placeholder="Password...."
             className="border-none outline-none py-2 px-4 rounded"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
           <button
             type="submit"
