@@ -31,7 +31,7 @@ function SignUp() {
   };
   return (
     <div className="flex justify-center items-center w-full h-screen bg-[#222222] ">
-      <div className="w-[30%] p-4 border-2 border-cyan-300 rounded">
+      <div className="w-[30%] p-4 border-2 border-emerald-300 rounded">
         <h1 className="text-center text-4xl font-bold text-white m-4">
           Sign Up
         </h1>
@@ -65,15 +65,15 @@ function SignUp() {
           />
           <button
             type="submit"
-            className=" py-2 px-4 rounded-md font-bold bg-cyan-300 border-2 border-[#222222] hover:border-cyan-300 hover:bg-[#222222] hover:text-cyan-300"
+            className=" py-2 px-4 rounded-md font-bold bg-emerald-300 border-2 border-[#222222] hover:border-emerald-300 hover:bg-[#222222] hover:text-emerald-300"
           >
             Sign Up
           </button>
         </form>
-        <div className="p-[1px] bg-cyan-300 my-4"></div>
+        <div className="p-[1px] bg-emerald-300 my-4"></div>
         <div className="text-center text-white">
           Already have an account? click here{" "}
-          <Link to="/sign-in" className="underline text-cyan-300">
+          <Link to="/sign-in" className="underline text-emerald-300">
             Sign in
           </Link>
         </div>

@@ -8,8 +8,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import { About, Contact, Documentation, Home, SignIn, SignUp } from "./pages/index.js";
-
+import {
+  About,
+  Contact,
+  Dashboard,
+  DiaryDashboard,
+  Documentation,
+  Home,
+  PageDashboard,
+  PersonDashboard,
+  ProfileDashboard,
+  SignIn,
+  SignUp,
+  WelcomeDashboard,
+} from "./pages/index.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +32,13 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="sign-up" element={<SignUp />} />
       <Route path="sign-in" element={<SignIn />} />
+      <Route path="dashboard/" element={<Dashboard />}>
+        <Route path="" element={<WelcomeDashboard />} />
+        <Route path="diary" element={<DiaryDashboard />} />
+        <Route path="page" element={<PageDashboard />} />
+        <Route path="person" element={<PersonDashboard />} />
+        <Route path="profile" element={<ProfileDashboard />} />
+      </Route>
     </Route>
   )
 );
