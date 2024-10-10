@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import userContext from '../../contexts/userContext.js';
+
 
 function WelcomeDashboard() {
+  const { client } = useContext(userContext);
   return (
-    <div>WelcomeDashboard gewrgwer
-        <p>fdwefwe</p>
+    <div className='w-full'>
+        <p className='text-4xl font-bold'>Welcome Back {client ? `, ${client.username}` : ""}</p>
+        <div className="p-[1px] bg-black my-4"></div>
     </div>
   )
 }
