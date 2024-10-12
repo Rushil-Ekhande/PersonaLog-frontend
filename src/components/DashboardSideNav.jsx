@@ -8,9 +8,9 @@ function DashboardSideNav() {
     }
   return (
     <>
-        <div className={`${hidden ? "hidden " : ""} side-nav w-[15%] p-4 bg-emerald-600 flex flex-col items-center border-y-2 border-black`}>
+        <div className={`${hidden ? "hidden " : ""} side-nav w-[15%] p-4 bg-primary flex flex-col items-center `}>
       <nav className="flex flex-col gap-8 p-4 w-[120%]">
-        <div className="">
+        <div>
           <Link
             to="/dashboard"
             className="flex items-center text-white font-bold gap-2 hover:opacity-75 active:opacity-50"
@@ -82,12 +82,12 @@ function DashboardSideNav() {
         </div>
       </nav>
       <div className="w-full m-auto flex justify-center items-center">
-        <button onClick={handleOnClick} className="w-full border-2 border-black py-2 px-4 rounded-md font-bold hover:border-emerald-300 hover:bg-[#222222] hover:text-emerald-300">
+        <button onClick={handleOnClick} className="w-full text-neutral border-2 border-neutral py-2 px-4 rounded-md font-bold hover:border-primary hover:bg-neutral hover:text-primary">
           Close Menu
         </button>
       </div>
     </div>
-    <div className={`${hidden ?  "" : "hidden "} bg-emerald-600 py-4 px-2 border-y-2 border-black`} >
+    <div className={`${hidden ?  "" : "hidden "} bg-primary py-4 px-2`} >
         <button onClick={handleOnClick} className="hover:opacity-60 active:opacity-50">
         <img
               src="public\assets\menu-arrow.png"

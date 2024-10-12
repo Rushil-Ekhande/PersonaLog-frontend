@@ -42,12 +42,12 @@ function SignIn() {
     }
   };
   return (
-    <div className="flex justify-center items-center w-full h-screen bg-[#222222] ">
-      <div className="w-[30%] p-4 border-2 border-emerald-300 rounded">
-        <h1 className="text-center text-4xl font-bold text-white m-4">
+    <div className="flex justify-center items-center w-full h-screen bg-neutral ">
+      <div className="w-[30%] p-4 rounded bg-primary shadow-xl">
+        <h1 className="text-center text-4xl font-bold text-neutral m-4">
           Sign In
         </h1>
-        <form className="flex flex-col gap-4" onSubmit={handleOnSubmit}>
+        <form className="flex flex-col gap-5 text-secondary" onSubmit={handleOnSubmit}>
           <input
             type="email"
             name="email"
@@ -68,15 +68,17 @@ function SignIn() {
           />
           <button
             type="submit"
-            className=" py-2 px-4 rounded-md font-bold bg-emerald-300 border-2 border-[#222222] hover:border-emerald-300 hover:bg-[#222222] hover:text-emerald-300"
+            className="text-neutral py-2 px-4 rounded-md border-2 border-neutral font-bold hover:border-primary hover:bg-neutral hover:text-primary"
+
           >
             Sign In
           </button>
         </form>
-        <div className="p-[1px] bg-emerald-300 my-4"></div>
+        <div className="p-[1px] bg-neutral my-4"></div>
+
         <div className="text-center text-white">
           Don't have an account yet? click here{" "}
-          <Link to="/sign-up" className="underline text-emerald-300">
+          <Link to="/sign-up" className="underline text-secondary hover:text-neutral">
             Sign up
           </Link>
         </div>
