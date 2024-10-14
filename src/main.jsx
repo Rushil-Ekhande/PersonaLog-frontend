@@ -11,6 +11,8 @@ import Layout from "./Layout.jsx";
 import {
   About,
   Contact,
+  CreateNewDiary,
+  CreateNewPage,
   Dashboard,
   DiaryDashboard,
   Documentation,
@@ -35,6 +37,8 @@ const router = createBrowserRouter(
       <Route path="dashboard/" element={<Dashboard />}>
         <Route path="" element={<WelcomeDashboard />} />
         <Route path="diary" element={<DiaryDashboard />} />
+        <Route path="create-new-diary" element={<CreateNewDiary/>}/>
+        <Route path="create-new-page" element={<CreateNewPage/>}/>
         <Route path="page" element={<PageDashboard />} />
         <Route path="person" element={<PersonDashboard />} />
         <Route path="profile" element={<ProfileDashboard />} />

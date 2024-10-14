@@ -10,6 +10,8 @@ import PageDashboard from "./Dashboard/PageDashboard.jsx";
 import PersonDashboard from "./Dashboard/PersonDashboard.jsx";
 import DiaryDashboard from "./Dashboard/DiaryDashboard.jsx";
 import ProfileDashboard from "./Dashboard/ProfileDashboard.jsx";
+import CreateNewDiary from "./Dashboard/Diary/CreateNewDiary.jsx";
+import CreateNewPage from "./Dashboard/CreateNewPage.jsx";
 
 export {
     Home,
@@ -24,4 +26,6 @@ export {
     PersonDashboard,
     DiaryDashboard,
     ProfileDashboard,
+    CreateNewDiary,
+    CreateNewPage,
 }

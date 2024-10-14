@@ -37,15 +37,21 @@ function WelcomeDashboard() {
           <div className="flex items-center justify-between">
             <p className="text-2xl font-bold tracking-wide text-neutral">Diary</p>
             <Link
-              to="/sign-in"
+              to="/dashboard/create-new-diary"
               className=" text-neutral border-2 border-neutral py-2 px-4 rounded-md font-bold hover:border-primary hover:bg-neutral hover:text-primary"
             >
               Create New
             </Link>
+
           </div>
           <div className="p-[1px] bg-neutral my-4"></div>
           <div className="">
-
+          <Link
+              to="/dashboard/create-new-page"
+              className=" text-neutral border-2 border-neutral py-2 px-4 rounded-md font-bold hover:border-primary hover:bg-neutral hover:text-primary"
+            >
+              Create New page
+            </Link>
           </div>
         </div>
       </div>

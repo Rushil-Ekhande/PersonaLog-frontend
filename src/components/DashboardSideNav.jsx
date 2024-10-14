@@ -16,7 +16,7 @@ function DashboardSideNav() {
             className="flex items-center text-white font-bold gap-2 hover:opacity-75 active:opacity-50"
           >
             <img
-              src="public/assets/home.png"
+              src="public\assets\home.png"
               alt="Home"
               height={30}
               width={30}
