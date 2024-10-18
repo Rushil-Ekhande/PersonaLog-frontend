@@ -14,6 +14,8 @@ function CreateNewPage() {
     const data = response.data;
     if(data.success){
         alert(data.message);
+        setTitle("");
+        setDescritpion("");
     }else{
         alert(data.message);
     }
